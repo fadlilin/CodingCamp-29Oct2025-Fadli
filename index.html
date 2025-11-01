@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/tes.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Todo List</h1>
+        
+        <div class="error-message" id="errorMessage"></div>
+
+        <div class="input-section">
+            <input type="text" id="todoInput" placeholder="Tambah Task">
+            <input type="date" id="dateInput">
+            <button class="add-btn" onclick="addTodo()">+</button>
+        </div>
+
+        <div class="controls">
+            <div class="filter-section">
+                <button class="filter-btn" onclick="toggleFilterDropdown()">
+                    <span id="currentFilter">FILTER</span>
+                    <span>▼</span>
+                </button>
+                <div class="filter-dropdown" id="filterDropdown">
+                    <div class="filter-option active" onclick="filterTodos('all')">Semua</div>
+                    <div class="filter-option" onclick="filterTodos('pending')">Pending</div>
+                    <div class="filter-option" onclick="filterTodos('completed')">Selesai</div>
+                </div>
+            </div>
+            <button class="delete-all-btn" onclick="deleteAll()">DELETE ALL</button>
+        </div>
+
+        <div class="table-header">
+            <span>TASK</span>
+            <span>DUE DATE</span>
+            <span>STATUS</span>
+            <span>ACTIONS</span>
+        </div>
+
+        <div class="todo-list" id="todoList">
+            <div class="empty-state">
+                <div class="empty-state-icon">📝</div>
+                <div class="empty-state-text">No task found</div>
+            </div>
+        </div>
+    </div>
+    <script src="javascript/tes.js"></script>
+</body>
+</html>
