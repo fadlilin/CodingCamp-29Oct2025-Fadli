@@ -97,6 +97,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .filter-section {
     position: relative;
 }
+
 .filter-btn {
     padding: 8px 16px;
     background: #f0f9ff;
